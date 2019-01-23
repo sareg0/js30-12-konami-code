@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+</head>
+<body>
+  <script>
+      const easterEgg = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a']
+      let combination = []
+      
+      window.addEventListener('keyup', (event) => {        
+        combination.push(event.key)
+        console.log(event.key)
+        combination.splice(-easterEgg.length - 1, combination.length - easterEgg.length)
+        if (combination.join('') == easterEgg.join('')) {
+          cornify_add();
+        }
+      })
+  </script>
+</body>
+</html>
